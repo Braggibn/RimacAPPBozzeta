@@ -1,0 +1,28 @@
+.first{
+    border-radius: 15px;
+    height: 5px;
+    width: 60%;
+    background: lightcoral;
+    margin-bottom: 15px;
+}
+.second{
+    border-top-left-radius: 15px !important;
+    border-bottom-left-radius: 15px !important;
+    height: 5px;
+    background: coral;
+}
+.container{
+    margin: 13px;
+}
+.Desktop{
+    display: none;
+}
+
+@media only screen and (min-width: 768px){
+    .Desktop{
+        display: block;
+    }
+    .Movil{
+        display: none;
+    }
+}

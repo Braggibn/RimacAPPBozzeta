@@ -1,0 +1,103 @@
+<div class="container">
+    <div class="inner"> 
+        <form (ngSubmit)="onSubmit()" [formGroup]='sendCasus'>
+            <div class="component1" >
+                <div class="left">
+                    <h2 class="fuse">¡Hola,  <span>Juan!</span> </h2>
+                    <p class="fusee ">Completa los datos de tu auto</p>
+                    <div class="selectLabel init">
+                        <p>Año</p>
+                        <div class="input-group mb-3">
+                            <select class="custom-select" id="inputGroupSelect01" formControlName="año">
+                                <option value="2019">2019</option>
+                                <option value="2020">2020.</option>
+                                <option value="2021">2021.</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="selectLabel">
+                        <p>Marca</p>
+                        <div class="input-group mb-3">
+                            <select class="custom-select" id="inputGroupSelect01" formControlName="marca">
+                                <option value="Wolkswagen">Wolkswagen</option>
+                                <option value="BMW">BMW</option>
+                                <option value="Renault">Renault</option>
+                                
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="cardTitle">
+                        <p>AYUDA</p>
+                    </div>
+                    <div class="help pt-3 pb-4">
+                        <div class="Movile">
+                            <img src="../../../assets/images/icon_car.svg" alt="Content" class="pos1">
+                            <div class="cardBoddy pt-2">
+                                <div class="cardHeader">
+                                    <p>¿No encuentras el modelo ?</p>
+                                </div>
+                                <div class="cardAction">
+                                    <p>CLICK AQUí</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="Desktop">
+                            <div class="cardBoddy pt-2">
+                                <div class="cardHeader">
+                                    <p>¿No encuentras el modelo ?</p>
+                                </div>
+                                <div class="cardAction">
+                                    <p>CLICK AQUí</p>
+                                </div>
+                            </div>
+                            <img src="../../../assets/images/icon_car.svg" alt="Content" class="pos1">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="component2 p">
+                <div class="left">
+                    <div class="comboBool pb-2">
+                        <label>¿Tu auto es a gas?</label>
+                        
+                    </div>
+                </div>
+                <div class="right pb-4">
+                    <div class="form-check">
+                        <input class="form-check-input" formControlName="gas" type="radio" value="true" name="gas" id="gas1">
+                        <label class="form-check-label ml-2" for="gas1">
+                        Si
+                        </label>
+                    </div>
+                    <div class="ml-3 form-check">
+                        <input class="form-check-input" formControlName="gas" type="radio" value="false" name="gas" id="gas2" checked>
+                        <label class="form-check-label ml-2" for="gas2">
+                        No
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="component3">
+                <div class="left">
+                    <p class="leftP"> Indica la suma asegurada</p>
+                    <div class="ranges">
+                        <p class="pr-4">MIN $12,500</p> <p class="pl-4">MAX $16,500</p>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="box">
+                        <span class="btnbox" (click)="decrement()"> - </span>
+                        <input class="btnInput" type="text" formControlName="sumaCasuistica" value="{{sumaCasuistica}}">
+                        <span class="btnbox" (click)="increment()"> + </span>
+                    </div>
+                </div>
+            </div> 
+            <button type="button" type="submit" class="fuse btn btn-primary">
+                continuar
+            </button>
+        </form>
+    </div>
+</div>

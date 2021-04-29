@@ -1,0 +1,190 @@
+body{
+    margin: 0;
+    background: #FFFFFF;
+}
+.container{
+    margin: 0 auto;
+    .left{
+        .img-desktop{
+            display: none;
+        }
+        padding: 1em;
+        h1{
+            margin:  1em 1;
+        }
+        p{
+            line-height: 14px;
+        }
+        .banner-container{
+            span{
+                color : #EF3340;
+            }
+            p{
+                color: #676F8F;
+            }
+            span{
+                display: block;
+            }
+            
+        }
+        .fusee{
+            margin-left: 20px;
+            width: 60%;
+        }
+    }
+    .light{
+        color: #A3ABCC;
+        margin-top: 5em;
+    }
+    .right{
+        margin: 0 auto;
+        .containerForm{
+            width: 100%;
+            margin: .5em auto 0;
+        }
+        .fuse{
+            width: calc(100% - 3em);
+            padding: .5em;
+            font-size: 1.3rem;
+            outline: none;
+            margin: 1em;
+        }
+        .comboInput{
+            display: flex;
+            margin-bottom: -30px;
+            .input-group{
+                position: relative;
+                top: 18px;
+                left: 20px; 
+                width: 100px;
+                .custom-select{
+                    height: 40px;
+                }
+            }
+            .form-group{
+                width: 100% !important;
+            }
+        }
+       
+        
+        button{
+            width: calc(100% - 5em);
+            margin: -1px;
+            background: #EF3340;
+            color : white;
+            border: none;
+            cursor: pointer;
+        }
+        .form-check{
+            margin: 40px;
+            padding: 0;
+            display: inline-block;
+            label{
+                font-size: 12px;
+                color: #676F8F
+            }
+        }
+    }
+    .fuse{
+        width: calc(100% - 4em);
+        padding: .5em;
+        outline: none;
+        margin: 0;
+    }
+    .pos1{
+        position: absolute;
+        top: 10%;
+        right: 0%;
+        z-index: 0;
+    }
+    .pos2{
+        position: absolute;
+        top: 10%;
+        right: 0%;
+        z-index: 0;
+    }
+}
+@media only screen and (min-width: 768px){
+    body{
+        font-size: 20px;
+    }
+    .containerForm{
+        .button{
+            width: 60% !important;
+        }
+    }
+}
+@media only screen and (min-width: 1024px){
+    .containerForm{
+        .button{
+            width: 60% !important;
+        }
+    }
+    .img-desktop{
+        display: block !important;
+        .pos1{
+            position: absolute;
+            top: 14%;
+            left: 15%;
+            z-index: 0;
+        }
+        .pos2{
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            z-index: -1;
+        }
+    }
+    .img-movil{
+        display: none !important;
+    }
+    .inner{
+            display: grid;
+            grid-template-columns: 55%  auto;
+    }
+
+    .left {
+        text-align: left;
+        padding: 0 2em;
+        height: 100vh;
+        grid: grid;
+
+        .banner-container{
+            padding: 0 3em;
+            position: absolute;
+            bottom: 8%;
+            left: 6%;
+            z-index: 0;
+        }
+        .fuse{
+            width: 100%;
+        }
+        .fusee{
+            margin-left: 20px;
+            width: 81% !important;
+        }
+        p{
+            font-size: 8px;
+        }
+        .light{
+            color: #A3ABCC;
+            margin-top: 7em;
+        }
+    }
+    .right{
+        text-align: center;
+        align-self: center;
+        padding: 0 2em 1.5em;
+        justify-self: center;
+
+        .comboInput{
+            display: flex;
+            .dropdown{
+                position: relative;
+                top: 19px;
+                left: 18px;
+            }
+        }
+    }
+    
+}

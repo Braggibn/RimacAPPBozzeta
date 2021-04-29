@@ -1,0 +1,204 @@
+<div class="container">
+  <div class="inner">
+    <form (ngSubmit)="onSubmit()" [formGroup]='sendCasus'>
+      <div class="component1">
+        <div class="left">
+          <h2 class="fuse">Mira las coberturas</h2>
+          <p class="fusee ">Completa los datos de tu auto</p>
+          <div class="help pt-3 pb-4">
+            <div class="cardBoddy pt-2">
+              <div class="cardHeader">
+                <p>¿No encuentras el modelo ?</p>
+                <p>¿No encuentras el modelo ?</p>
+              </div>
+              <div class="cardAction">
+                <p>EDITAR</p>
+              </div>
+            </div>
+            <img src="../../../assets/images/icon_car.svg" alt="Content" class="pos1">
+          </div>
+          <p class="fusee">Agrega o quita coberturas</p>
+        </div>
+        <div class="right fuseDesktop">
+          <div class="cardTitle">
+            <p>AYUDA</p>
+          </div>
+          <div class="help pt-3">
+            <div class="cardBoddy pt-2">
+              <div class="cardHeader">
+                <p>35.00</p>
+              </div>
+              <div class="cardActionR">
+                <p>mensuales</p>
+              </div>
+            </div>
+            <img src="../../../assets/images/Group 92.1.svg" alt="Content" class="pos1">
+          </div>
+          <div class="help pt-3">
+            <div class="cardBoddy">
+              <div class="cardActionTitle">
+                <p>El precio incluye:</p>
+              </div>
+              <div class="cardCheck">
+                <div class=" cardList">
+                  <i class="fa fa-check" aria-hidden="true"></i>
+                  <p>LLanta de repuesto</p>
+                </div>
+                <div class=" cardList">
+                  <i class="fa fa-check" aria-hidden="true"></i>
+                  <p>Analisis de motor</p>
+                </div>
+                <div class=" cardList">
+                  <i class="fa fa-check" aria-hidden="true"></i>
+                  <p>Aros</p>
+                </div>
+                <button type="button" type="submit" class="fuse btn btn-primary">
+                    LO QUIERO
+                </button>
+              </div>
+  
+            </div>
+          </div>
+        </div>
+        
+
+      </div>
+
+      <div class="component2">
+        <div class="left active">
+          <div class="comboBool pb-2">
+            <label>PROTEGE A TU AUTO</label>
+
+          </div>
+        </div>
+        <div class="left">
+          <div class="comboBool pb-2">
+            <label>PROTEGE A LOS QUE TE RODEAN</label>
+
+          </div>
+        </div>
+        <div class="left">
+          <div class="comboBool pb-2">
+            <label>MEJORA TU PlAN</label>
+
+          </div>
+        </div>
+      </div>
+      <div class="component3">
+        <div id="accordion">
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <div class="accordionLink" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                aria-controls="collapseOne">
+                <div class="accordion pt-2">
+                  <div class="acordioTM">
+                     <img src="../../../assets/images/icon_theft.svg" alt="Content" class="pos1">
+                     <div class="acordioIMG pl-4">
+                        <div class="cardHeader">
+                            Llanta robada
+                        </div>
+                        <div class="cardAction">
+                                <p>VER MAS</p>
+                        </div>
+                     </div>
+                  </div>
+                </div>
+                <div class="custom-control custom-switch">
+                  <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                  <label class="custom-control-label" for="customSwitch1"></label>
+                </div>
+              </div>
+            </div>
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+              <div class="card-body">
+                He salido de casa a las cuatro menos cinco para ir a la academia de ingles de mi pueblo (Sant Cugat, al
+                lado de Barcelona) con mi bici, na llego a la academia que está en el centro del pueblo en una plaza
+                medio-grande y dejo donde siempre la bici atada con una pitón a un sitio de esos de poner las bicis
+                y mucho más
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <div class="accordionLink" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
+                aria-controls="collapseTwo">
+                <div class="accordion pt-2">
+                    <div class="acordioTM">
+                       <img src="../../../assets/images/Group 16689.svg" alt="Content" class="pos1">
+                       <div class="acordioIMG pl-4">
+                          <div class="cardHeader">
+                            Choque y/o pasarte la luz roja 
+                          </div>
+                          <div class="cardAction">
+                                  <p>VER MAS</p>
+                          </div>
+                       </div>
+                    </div>
+                  </div>
+                <div class="custom-control custom-switch">
+                  <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                  <label class="custom-control-label" for="customSwitch1"></label>
+                </div>
+              </div>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+              <div class="card-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
+                moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+                Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
+                shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea
+                proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim
+                aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingThree">
+              <div class="accordionLink" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true"
+                aria-controls="collapseThree">
+                <div class="accordion pt-2">
+                    <div class="acordioTM">
+                       <img src="../../../assets/images/icon_perdidatotal.svg" alt="Content" class="pos1">
+                       <div class="acordioIMG pl-4">
+                          <div class="cardHeader">
+                            Atropello en la vía Evitamiento 
+                          </div>
+                          <div class="cardAction">
+                                  <p>VER MAS</p>
+                          </div>
+                       </div>
+                    </div>
+                  </div>
+                <div class="custom-control custom-switch">
+                  <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                  <label class="custom-control-label" for="customSwitch1"></label>
+                </div>
+              </div>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+              <div class="card-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
+                moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+                Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
+                shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea
+                proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim
+                aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="help pt-3 Movil">
+        <div class="cardBoddy pt-2">
+          <div class="cardHeaderMovil">
+            <p class="title">35.00</p>
+            <p>MENSUAL</p>
+          </div>
+        </div>
+        <button type="button" type="submit" class="fuseMovil btn btn-primary">
+          LO QUIERO
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

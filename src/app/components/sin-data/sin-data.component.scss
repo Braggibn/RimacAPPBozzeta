@@ -1,0 +1,280 @@
+.inner{
+   .selectLabel{
+        p{
+            position: relative;
+            top: 34px;
+            left: 12px;
+            z-index: 15;
+        }
+        select{
+            height: 56px;
+        }
+    }
+    .component1{
+        .left{
+            span{
+                color : #EF3340;
+            }
+        }
+        p,label{
+            font-size: 16px;
+        }
+        .cardTitle{
+            border-bottom: 1px solid #E4E8F7 ;
+            display: none;
+            
+        }  
+        .help{ 
+            .Movile{
+                display: flex;
+                margin: auto
+            }
+            display: flex;
+            justify-content: space-evenly;
+            .cardBoddy{
+                width: 60% ;
+                padding-left: 17px;
+                .cardAction{
+                    color: #6F7DFF;
+                    p{
+                        font-size: 10px !important;
+                    }
+                    
+                }
+            }
+        }
+        .fusee{
+            padding-bottom: 8px;
+        } 
+        
+    }
+    .component2{
+        p,label{
+            font-size: 16px;
+        }
+        .left{
+            display: inline-block;
+            padding-left: 10px;
+        }
+        .right{
+            margin: 0;
+            .form-check{
+                display: inline-block;
+                margin: 0 10px  0 0;
+            }
+        }
+        
+    }
+    .fuse{
+        width: 100%;
+    }
+
+    .component3{
+        padding-bottom: 30px;
+        .box{
+            justify-content: space-around;
+            display: flex;
+            border: 1px solid #E4E8F7 ;
+            border-radius: 15px;
+            height: 53px !important;
+            align-items: center;
+            text-align: center;
+            input {
+                background-color: transparent;
+                text-align: center;
+                display: inline-block;
+                padding: 2px;
+                margin: 0;
+                border: none;
+            }
+            p{
+                position: relative;
+                top: 15px;
+            }
+            // .btnInput{
+            //     w: 80%;
+            // }
+            .btnbox{
+                font-size: 10px;
+                margin: auto;
+            }
+        }
+        .left{
+            .leftP{
+                font-size: 16px;
+            }
+            .ranges{
+                font-size: 12px !important;
+                color: #676F8F;
+
+                display: flex;
+                p{
+                    display: inline-block;
+                }
+            }
+        }
+        .right{
+            border-radius: 1 solid #E4E8F7;
+        }
+        
+    }
+    button{
+        height: 53px !important;
+    }
+}
+.selectLabel{
+    margin-top: -33px;
+    p{
+        position: relative;
+        top: 34px;
+        left: 12px;
+        z-index: 15;
+    }
+    select{
+        height: 56px;
+    }
+}
+.component1{
+    .cardTitle{
+        border-bottom: 1px solid #E4E8F7 ;
+        display: none;
+    }  
+    .help{
+        display: flex;
+        justify-content: space-evenly;
+        .Desktop{
+            display: none;
+        }
+    } 
+    
+}
+.component2{
+    .left{
+        display: inline-block;
+        padding-left: 10px;
+    }
+    .right{
+        margin: 0;
+        .form-check{
+            display: inline-block;
+            margin: 0 10px  0 0;
+        }
+    }
+    
+}
+.fuse{
+    width: 100%;
+}
+
+.component3{
+    padding-bottom: 30px;
+    .box{
+        justify-content: space-around;
+        display: flex;
+        border: 1px solid #E4E8F7 ;
+        border-radius: 15px;
+        height: 53px !important;
+        align-items: center;
+        text-align: center;
+        input {
+            background-color: transparent;
+            text-align: center;
+            display: inline-block;
+            padding: 2px;
+            margin: 0;
+            border: none;
+        }
+        p{
+            position: relative;
+            top: 15px;
+        }
+        // .btnInput{
+        //     w: 80%;
+        // }
+        .btnbox{
+            font-size: 10px;
+            margin: auto;
+        }
+    }
+    .left{
+        .ranges{
+            font-size: 12px !important;
+            color: #676F8F;
+
+            display: flex;
+            p{
+                display: inline-block;
+            }
+        }
+    }
+    .right{
+        border-radius: 1 solid #E4E8F7;
+    }
+    
+}
+
+.btn-primary{
+    height: 53px !important;
+    background: #EF3340;
+    border: unset;
+}
+button:focus {
+    background-color:#EF3340;
+}
+button:active{  
+    background-color:#EF3340;
+}
+button:hover{  
+    background-color:#EF3340;
+}
+@media only screen and (min-width: 768px){
+    .clase{
+        display: grid;
+        grid-template-columns: 30%  auto;
+    }
+    .component1{
+        display: grid;
+        grid-template-columns: 55% auto;
+
+        .right{
+            text-align: left;
+            align-self: flex-end;
+            padding: 0 2em 1.5em;
+            justify-self: end;
+        }
+    }
+    .component2{
+        display: grid;
+        grid-template-columns: 35% auto;
+
+        .right{
+            text-align: left;
+            align-self: flex-start;
+            padding: 0 2em 1.5em;
+            justify-self: baseline;
+        }
+    }
+    .component3{
+        display: grid;
+        grid-template-columns: 35% auto;
+
+        .right{
+            text-align: left;
+            align-self: flex-start;
+            justify-self: baseline;
+        }
+    }
+    .fuse{
+        width: 30% !important;
+        height: 56px;
+    }
+    .Desktop{
+        display: block;
+    }
+    .Movile{
+        display: none;
+    }
+    
+}
+
+    

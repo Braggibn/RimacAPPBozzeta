@@ -1,0 +1,54 @@
+<div class="container">
+    <div class="inner"> 
+        <div class="left">
+            <div class="img-movil">
+                    <img src="../../../assets/images/Group16.svg" alt="Content" class="pos1" >
+            </div>
+            <div class="img-desktop">
+                    <img src="../../../assets/images/Mask Group.svg" alt="Content" class="pos1" >
+                    <img src="../../../assets/images/Mask Group-1.svg" alt="Content" class="pos2">
+            </div>
+            <div class="banner-container">
+                <h3 class="fuse">¡NUEVO!</h3>
+                <h2 class="fuse">Seguro Vehicular <span>Tracking</span> </h2>
+                <p class="fusee ">Cuentanos donde le haras seguimiento a tu seguro</p>
+                 <p class="light">© 2020 RIMAC Seguros y Reaseguros.</p>
+            </div>
+        </div>
+        <div class="right">
+            <div class="containerForm"> 
+                <form (ngSubmit)="onSubmit()" [formGroup]='sendPerson'>
+                    <h1 class="fuse">Dejanos tus datos</h1>
+                    <div class="comboInput">
+                        <div class="input-group mb-3">
+                            <select  class="custom-select" id="inputGroupSelect01" formControlName="document">
+                                <option value="DNI">DNI</option>
+                                <option value="C.EXT">C.EXT.</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="fuse form-control" formControlName="numDocument" placeholder="Nro. de doc." #document> 
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="fuse form-control" formControlName="celular" placeholder="Celular">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="fuse form-control" formControlName="placa" placeholder="Placa"> 
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
+                    
+                        <label class="form-check-label" for="flexCheckIndeterminate">
+                            Acepto la Política de Protecciòn de Datos Personales y los Términos y Condiciones.
+                        </label>
+                    </div>
+                    <button type="button" type="submit" class="fuse btn btn-primary">
+                        Cotizalo
+                    </button>
+                </form> 
+             </div>
+        </div>
+    </div>
+
+</div>
