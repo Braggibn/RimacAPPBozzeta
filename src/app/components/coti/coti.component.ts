@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../../services/api.service'
 import { FormBuilder, FormControl, FormGroup , Validators} from '@angular/forms';
 import { Router } from '@angular/router';
+import { PersonaService } from '../../services/persona.service';
+
 @Component({
   selector: 'app-coti',
   templateUrl: './coti.component.html',
@@ -11,46 +13,56 @@ export class CotiComponent implements OnInit {
   sendPerson:FormGroup = new FormGroup(
     {
       document : new FormControl('',[Validators.required]),
-      numDocument: new FormControl('',[Validators.required]),
-      celular: new FormControl('',[Validators.required]),
-      placa: new FormControl('',[Validators.required])
+      numDocumento: new FormControl('',[Validators.required,Validators.minLength(8)]),
+      celular: new FormControl('',[Validators.required,Validators.minLength(9)]),
+      placa: new FormControl('',[Validators.required,Validators.minLength(8)]),
+      nombre: new FormControl('',[Validators.required,Validators.minLength(3)]),
+      acepta: new FormControl('',[Validators.required])
     }
   );
+
+
   personaRandom: any = '';
   nombre='';
   documento='';
   placa=''; 
   celular="";
   numDocument="";
-  constructor(private apiservice: ApiService,
+  acepta="";
+  constructor(private apiservice: ApiService, public seguroService : PersonaService,
     private router : Router) { }
 
   ngOnInit(){
-    this.getPerson()
+    this.getPerson();
   } 
   getPerson(){
     this.apiservice.getUser().subscribe(
-      res=> {
-        this.personaRandom = res;
-        this.celular = this.personaRandom.results[0].cell;
-        this.numDocument = this.personaRandom.results[0].location.postcode;
-        this.placa = this.personaRandom.results[0].login.salt;
-        // this.nombre = this.personaRandom.results[0].name.first;
-        this.sendPerson.patchValue({
+      (res :any)=> {
+        console.log(res.results[0])
+        this.personaRandom = res.results[0];
+        this.celular = this.personaRandom.cell
+        this.numDocument = this.personaRandom.location.postcode
+        this.placa = this.personaRandom.login.salt
+        this.nombre = this.personaRandom.name.first
+        this.sendPerson.setValue({
+          nombre: this.nombre,
+          celular: this.celular,
           numDocumento : this.numDocument,
           document: this.documento,
-          celular: this.celular,
-          placa: this.placa
-        });
-        
+          placa: this.placa ,
+          acepta: this.acepta
+           });
       },
       err=>{
       }
     )
-    console.log(this.personaRandom)
+    
   }
   onSubmit(){
-    console.log(this.sendPerson.value)
+    this.seguroService.addUsuarios(
+      this.sendPerson.value
+    )
+    console.log("hola",this.sendPerson.value)
     this.router.navigate(['/sinData'])
   }
   

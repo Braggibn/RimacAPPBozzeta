@@ -3,6 +3,9 @@ body{
     background: #FFFFFF;
 }
 .container{
+    .name{
+        display: none;
+    }
     margin: 0 auto;
     .left{
         .img-desktop{

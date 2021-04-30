@@ -1,3 +1,10 @@
+.Movile{
+    display: none;
+}
+.bordered{
+    border:3px solid #F0F2FA;
+    border-radius: 12px;
+ }
 .inner{
     .selectLabel{
          p{
@@ -25,20 +32,38 @@
              display: none;
          }  
          .help{
+             
              display: flex;
              justify-content: space-evenly;
              .cardAction{
-                 p{
-                     font-size: 12px;
-                     color: #6F7DFF;
-                 }
-             }
+                p{
+                    font-size: 12px;
+                    color: #6F7DFF;
+                }
+            }
              .cardActionR{
                 p{
                     font-size: 12px;
                     color: #676F8F;
                 }
+            }.cardHeader{
+                line-height: 10px;
+                span{
+                    display: block;
+                    padding-bottom: 10px;
+                }
+                p{
+                    display: inline-block;
+                }
+                .firsst{
+                    color: #A3ABCC;
+                    font-size: 12px;
+                }
             }
+            .cardBoddy{
+
+            }
+            
          }
          .fusee{
              padding-bottom: 8px;
@@ -78,6 +103,23 @@
          height: 56px;
      }
  }
+ .cardAction{
+     display: inline-block;
+     i{
+        border: 1px solid #6F7DFF;
+        border-radius: 15px;
+        font-size: 2px;
+        padding: 2px;
+    
+     }
+    i,p{
+        padding: 3px;
+        margin: 3px;
+        display: inline-block;
+        font-size: 12px;
+        color: #6F7DFF;
+    }
+}
  .component1{
      .cardTitle{
          border-bottom: 1px solid #E4E8F7 ;

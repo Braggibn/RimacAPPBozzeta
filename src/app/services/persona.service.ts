@@ -1,18 +1,17 @@
 import { Injectable } from '@angular/core';
 import { Iuser } from '../models/user';
+import { Observable } from "rxjs";
  
 @Injectable({
   providedIn: 'root'
 })
-export class PokemonService {
+export class PersonaService {
 
   asegurado: Iuser []
 
     
   constructor() { 
-      this.asegurado = [
-          // {name: 'string', type: 'string' , atack: 1 ,defens: 22, espcial: 22}
-      ];
+      this.asegurado = [ ]
   }
 
   getUsuario(){
@@ -24,19 +23,17 @@ export class PokemonService {
     }
   }
 
-  captureUsuario(usuario : Iuser){
-    this.asegurado.push(usuario)
-    let asegurados : Iuser[] = [];
-    if(localStorage.getItem('listaP')===null){
-      asegurados.push(usuario)
-      localStorage.setItem('listaP' , JSON.stringify(asegurados))
+  addUsuarios(user : Iuser){
+    this.asegurado.push(user);
+    let asegurado:Iuser[]= [];
+    if(localStorage.getItem('listaP') === null){
+      asegurado.push(user);
+      localStorage.setItem('listaP', JSON.stringify(asegurado));
     }else{
-      asegurados = JSON.parse(localStorage.getItem('listaP'));
-      asegurados.push(usuario);
-      localStorage.setItem('listaP', JSON.stringify(asegurados));
-
+      asegurado = JSON.parse(localStorage.getItem('listaP'));
+      asegurado.push(user)
+      localStorage.setItem('listaP', JSON.stringify(asegurado));
     }
-    
   }
 
 }

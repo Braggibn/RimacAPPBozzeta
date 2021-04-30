@@ -5,11 +5,11 @@
         <div class="left">
           <h2 class="fuse">Mira las coberturas</h2>
           <p class="fusee ">Completa los datos de tu auto</p>
-          <div class="help pt-3 pb-4">
+          <div class="help bordered pt-3 pb-4">
             <div class="cardBoddy pt-2">
-              <div class="cardHeader">
-                <p>¿No encuentras el modelo ?</p>
-                <p>¿No encuentras el modelo ?</p>
+              <div class="cardHeader" *ngIf="coberturas">
+                <span class="firsst">{{coberturas[0].placa}}</span>
+                <p>{{coberturas[1].marca}}</p><p>{{coberturas[1].fecha}}</p>
               </div>
               <div class="cardAction">
                 <p>EDITAR</p>
@@ -26,8 +26,9 @@
           <div class="help pt-3">
             <div class="cardBoddy pt-2">
               <div class="cardHeader">
-                <p>35.00</p>
+                <p>{{i.toFixed(2)}}</p>
               </div>
+              <input type="text" class="fuse form-control Movil" formControlName="sumaCasuistica" placeholder=""> 
               <div class="cardActionR">
                 <p>mensuales</p>
               </div>
@@ -97,9 +98,6 @@
                         <div class="cardHeader">
                             Llanta robada
                         </div>
-                        <div class="cardAction">
-                                <p>VER MAS</p>
-                        </div>
                      </div>
                   </div>
                 </div>
@@ -111,6 +109,14 @@
             </div>
             <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
               <div class="card-body">
+                <div class="red">
+                  <div class="cardAction" tipe="button" (click)="agregar()"  id="continuar2">
+                    <i class="fa fa-plus"  aria-hidden="true"></i> <p>AGREGAR</p>
+                  </div>   
+                  <div class="cardAction Movil" tipe="button"(click)="quitar()"  id="continuar1">
+                    <i class="fa fa-minus"  aria-hidden="true"></i><p>QUITAR</p>
+                  </div>  
+                </div>
                 He salido de casa a las cuatro menos cinco para ir a la academia de ingles de mi pueblo (Sant Cugat, al
                 lado de Barcelona) con mi bici, na llego a la academia que está en el centro del pueblo en una plaza
                 medio-grande y dejo donde siempre la bici atada con una pitón a un sitio de esos de poner las bicis
@@ -129,9 +135,6 @@
                           <div class="cardHeader">
                             Choque y/o pasarte la luz roja 
                           </div>
-                          <div class="cardAction">
-                                  <p>VER MAS</p>
-                          </div>
                        </div>
                     </div>
                   </div>
@@ -143,6 +146,14 @@
             </div>
             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
               <div class="card-body">
+                <div class="red">
+                  <div class="cardAction" tipe="button" (click)="agregarChoque()"  id="continuar22">
+                    <i class="fa fa-plus"  aria-hidden="true"></i> <p>AGREGAR</p>
+                  </div>   
+                  <div class="cardAction Movil" tipe="button"(click)="quitarChoque()"  id="continuar12">
+                    <i class="fa fa-minus"  aria-hidden="true"></i><p>QUITAR</p>
+                  </div>   
+                </div>
                 Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
                 moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
                 Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
@@ -163,9 +174,6 @@
                           <div class="cardHeader">
                             Atropello en la vía Evitamiento 
                           </div>
-                          <div class="cardAction">
-                                  <p>VER MAS</p>
-                          </div>
                        </div>
                     </div>
                   </div>
@@ -177,6 +185,14 @@
             </div>
             <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
               <div class="card-body">
+                <div class="red">
+                  <div class="cardAction" tipe="button" (click)="agregarAtropello()"  id="continuar23">
+                    <i class="fa fa-plus"  aria-hidden="true"></i> <p>AGREGAR</p>
+                  </div>   
+                  <div class="cardAction Movil" tipe="button"(click)="quitarAtropello()"  id="continuar13">
+                    <i class="fa fa-minus"  aria-hidden="true"></i><p>QUITAR</p>
+                  </div>  
+                </div>
                 Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
                 moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
                 Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda

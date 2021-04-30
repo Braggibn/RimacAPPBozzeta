@@ -2,13 +2,13 @@
     <div class="inner"> 
         <form (ngSubmit)="onSubmit()" [formGroup]='sendCasus'>
             <div class="component1" >
-                <div class="left">
-                    <h2 class="fuse">¡Hola,  <span>Juan!</span> </h2>
+                <div class="left" *ngIf="nombreAfi">
+                    <h2 class="fuse">¡Hola,  <span>{{nombreAfi[0].nombre}}!</span> </h2>
                     <p class="fusee ">Completa los datos de tu auto</p>
                     <div class="selectLabel init">
                         <p>Año</p>
                         <div class="input-group mb-3">
-                            <select class="custom-select" id="inputGroupSelect01" formControlName="año">
+                            <select class="custom-select" id="inputGroupSelect01" formControlName="fecha">
                                 <option value="2019">2019</option>
                                 <option value="2020">2020.</option>
                                 <option value="2021">2021.</option>

@@ -4,8 +4,9 @@ export interface Iuser {
     numDocumento: number;
     celular: number;
     placa: string;
-    año: number;
+    fecha: number;
     marca: string;
     sumaCasuistica: number; 
-    gas:boolean
+    gas:boolean,
+    acepta:boolean,
 }

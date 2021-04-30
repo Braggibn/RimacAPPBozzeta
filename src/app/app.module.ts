@@ -16,6 +16,7 @@ import { StepperComponent } from './shared/stepper/stepper.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './shared/material.module';
+import { PersonaService } from './services/persona.service';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,7 @@ import { MaterialModule } from './shared/material.module';
     MaterialModule
 
   ],
-  providers: [ApiService],
+  providers: [ApiService,PersonaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
